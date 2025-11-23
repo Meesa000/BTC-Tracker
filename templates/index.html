@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="1000+">
+    <title>Bitcoin Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    
+    <div class="title-container">
+        <h1>{{ name }} Tracker</h1>
+    </div>
+
+    <div class="main-content">
+        <p>Max supply: {{ max_supply }}</p>
+        <p>Total supply: {{ total_supply }}</p>
+        <p>Amount of bitcoins left: {{ supply_left }}</p>
+        <p>Price (GBP): £{{ gbp_price}}</p>
+
+        <p id="1h">Percentage changed 1 hour: {{ pct_change_1h }} %</p>
+        <p id="24h">Percentage changed 24 hours: {{ pct_change_24h }} %</p>
+        <p id="7d">Percentage changed 7 days: {{ pct_change_7d }} %</p>
+        <p id="30d">Percentage changed 30 days: {{ pct_change_30d }} %</p>
+        <p id="60d">Percentage changed 60 days: {{ pct_change_60d }} %</p>
+        <p id="90d">Percentage changed 90 days: {{ pct_change_90d }} %</p>
+    </div>
+
+    <div class="footer">
+        <p>The page will refresh automatically every 60 seconds.</p>
+        <p>Last updated: {{ last_updated }}</p>
+    </div>
+  
+</body>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>
+

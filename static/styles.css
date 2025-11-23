@@ -1,0 +1,27 @@
+.title-container
+{
+   text-align: center;
+   font-size: x-large;
+   /* background-color: red; */
+}
+
+.main-content
+{
+    text-align: center;
+    font-size: larger;
+    font-weight: 1000;
+    /* background-color: red; */
+    text-decoration-style: solid;
+}
+
+.footer 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    /* background-color: red; */
+    min-height: px;
+    
+
+}
