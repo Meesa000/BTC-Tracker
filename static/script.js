@@ -14,12 +14,13 @@
             var pctChange60dText = document.getElementById("60d").textContent;
             var pctChange90dText = document.getElementById("90d").textContent;
 
-            var splitString1h = pctChange1hText.replace("Percentage changed 1 hour:", "");
-            var splitString24h = pctChange24hText.replace("Percentage changed 24 hours:", "");
-            var splitString7d = pctChange7dText.replace("Percentage changed 7 days:", "");
-            var splitString30d = pctChange30dText.replace("Percentage changed 30 days:", "");
-            var splitString60d = pctChange60dText.replace("Percentage changed 60 days:", "");
-            var splitString90d = pctChange90dText.replace("Percentage changed 90 days:", "");
+            var splitString1h = pctChange1hText.replace("1-hour change:", "");
+            var splitString24h = pctChange24hText.replace("24-hour change:", "");
+            var splitString7d = pctChange7dText.replace("7-day change:", "");
+            var splitString30d = pctChange30dText.replace("30-day change:", "");
+            var splitString60d = pctChange60dText.replace("60-day change:", "");
+            var splitString90d = pctChange90dText.replace("90-day change:", "");
+
 
             var pctChange1hFloat = parseFloat(splitString1h);
             var pctChange24hFloat = parseFloat(splitString24h);
