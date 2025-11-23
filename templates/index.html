@@ -3,36 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="1000">
+    <meta http-equiv="refresh" content="1000000">
     <title>Bitcoin Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     
     <div class="title-container">
         <h1>{{ name }} Tracker</h1>
+
+        <!-- Bitcoin logo-->
+        <svg width="80px" height="80px" viewBox="0.004 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M63.04 39.741c-4.274 17.143-21.638 27.575-38.783 23.301C7.12 58.768-3.313 41.404.962 24.262 5.234 7.117 22.597-3.317 39.737.957c17.144 4.274 27.576 21.64 23.302 38.784z" fill="#f7931a"></path><path d="M46.11 27.441c.636-4.258-2.606-6.547-7.039-8.074l1.438-5.768-3.512-.875-1.4 5.616c-.922-.23-1.87-.447-2.812-.662l1.41-5.653-3.509-.875-1.439 5.766c-.764-.174-1.514-.346-2.242-.527l.004-.018-4.842-1.209-.934 3.75s2.605.597 2.55.634c1.422.355 1.68 1.296 1.636 2.042l-1.638 6.571c.098.025.225.061.365.117l-.37-.092-2.297 9.205c-.174.432-.615 1.08-1.609.834.035.051-2.552-.637-2.552-.637l-1.743 4.02 4.57 1.139c.85.213 1.683.436 2.502.646l-1.453 5.835 3.507.875 1.44-5.772c.957.26 1.887.5 2.797.726L27.504 50.8l3.511.875 1.453-5.823c5.987 1.133 10.49.676 12.383-4.738 1.527-4.36-.075-6.875-3.225-8.516 2.294-.531 4.022-2.04 4.483-5.157zM38.087 38.69c-1.086 4.36-8.426 2.004-10.807 1.412l1.928-7.729c2.38.594 10.011 1.77 8.88 6.317zm1.085-11.312c-.99 3.966-7.1 1.951-9.083 1.457l1.748-7.01c1.983.494 8.367 1.416 7.335 5.553z" fill="#ffffff"></path></g></svg>
     </div>
 
     <div class="main-content">
-        <p>Max supply: {{ max_supply }}</p>
-        <p>Total supply: {{ total_supply }}</p>
-        <p>Amount of bitcoins left: {{ supply_left }}</p>
-        <p>Price (GBP): £{{ gbp_price}}</p>
-
-        <p id="1h">Percentage changed 1 hour: {{ pct_change_1h }} %</p>
-        <p id="24h">Percentage changed 24 hours: {{ pct_change_24h }} %</p>
-        <p id="7d">Percentage changed 7 days: {{ pct_change_7d }} %</p>
-        <p id="30d">Percentage changed 30 days: {{ pct_change_30d }} %</p>
-        <p id="60d">Percentage changed 60 days: {{ pct_change_60d }} %</p>
-        <p id="90d">Percentage changed 90 days: {{ pct_change_90d }} %</p>
+        <p>Price of 1 Bitcoin: £{{ gbp_price}}</p>
+        <p id="1h">Percentage changed 1 hour: <span class="bold">{{ pct_change_1h }} %</span></p>
+        <p id="24h">Percentage changed 24 hours: <span class="bold">{{ pct_change_24h }} %</span></p>
+        <p id="7d">Percentage changed 7 days: <span class="bold">{{ pct_change_7d }} %</span></p>
+        <p id="30d">Percentage changed 30 days: <span class="bold">{{ pct_change_30d }} %</span></p>
+        <p id="60d">Percentage changed 60 days: <span class="bold">{{ pct_change_60d }} %</span></p>
+        <p id="90d">Percentage changed 90 days: <span class="bold">{{ pct_change_90d }} %</span></p>
+         <p>Max supply of bitcoins: {{ max_supply }}</p>
+         <p>Total current supply of bitcoins: {{ total_supply }}</p>
+         <p>Amount of bitcoins left: {{ supply_left }}</p>
     </div>
 
     <div class="footer">
         <p>The page will refresh automatically every 60 seconds.</p>
         <p>Last updated: {{ last_updated }}</p>
+        <p>Made by Meesa</p>
     </div>
-  
+
+    
 </body>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+ 
+
 </html>
 

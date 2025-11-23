@@ -39,6 +39,7 @@
                     let index = floatList.indexOf(element);
                     let colour = "red";
                     idList[index].style.color = colour;
+                    idList[index].innerHTML += "▼";
                 }
                 else if (element > 0)
                 {
@@ -46,6 +47,8 @@
                     let index = floatList.indexOf(element);
                     let colour = "green";
                     idList[index].style.color = colour;
+                     idList[index].innerHTML += "▲";
+
                 }
             }
             

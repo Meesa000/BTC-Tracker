@@ -1,27 +1,34 @@
+body 
+{
+    font-family: "Inter", sans-serif;
+    background-color: #1e1e2f;
+    color: white;
+}
+
 .title-container
 {
+   
    text-align: center;
    font-size: x-large;
-   /* background-color: red; */
 }
 
 .main-content
 {
     text-align: center;
     font-size: larger;
-    font-weight: 1000;
-    /* background-color: red; */
     text-decoration-style: solid;
 }
 
+.bold
+{
+    font-weight: bold;
+}
 .footer 
 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: end;
-    /* background-color: red; */
     min-height: px;
-    
-
 }
+
